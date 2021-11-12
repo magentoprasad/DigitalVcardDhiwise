@@ -1,0 +1,1432 @@
+{
+"info": {
+"_postman_id": "b9337051-585d-48e0-9de1-791ea317f362",
+"name": "DigitalVCard",
+"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+},
+"item": [
+{
+"name": "Admin",
+"description": "admin APIs",
+"item": [
+{
+"name": "Service",
+"description": "Service Model APIs",
+"item": [
+{
+"name": "Add Service",
+"request": {
+"url": "{{host}}/api/admin/services",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"service_id\": \"occaecati\", \n  \"service_name\": \"nesciunt\", \n  \"service_desc\": \"in\", \n  \"is_active\": true  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Service Details",
+"request": {
+"url": "{{host}}/api/admin/services/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Service Listing",
+"request": {
+"url": "{{host}}/api/admin/services",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Update Service",
+"request": {
+"url": "{{host}}/api/admin/services/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"service_id\": \"occaecati\", \n  \"service_name\": \"nesciunt\", \n  \"service_desc\": \"in\", \n  \"is_active\": true  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete Service",
+"request": {
+"url": "{{host}}/api/admin/services/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add Service",
+"request": {
+"url": "{{host}}/api/admin/services/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}, \n\t{\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update Service",
+"request": {
+"url": "{{host}}/api/admin/services/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+},
+{
+"name": "User",
+"description": "User Model APIs",
+"item": [
+{
+"name": "Add User",
+"request": {
+"url": "{{host}}/api/admin/users",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"username\": \"vel\", \n  \"password\": \"dolorem\", \n  \"email\": \"explicabo\", \n  \"name\": \"quia\", \n  \"email_verified_at\": \"2021-11-12 10:28:26\", \n  \"is_active\": true, \n  \"user_type\": 1  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "User Details",
+"request": {
+"url": "{{host}}/api/admin/users/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "User Listing",
+"request": {
+"url": "{{host}}/api/admin/users",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Update User",
+"request": {
+"url": "{{host}}/api/admin/users/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"username\": \"vel\", \n  \"password\": \"dolorem\", \n  \"email\": \"explicabo\", \n  \"name\": \"quia\", \n  \"email_verified_at\": \"2021-11-12 10:28:26\", \n  \"is_active\": true, \n  \"user_type\": 1  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete User",
+"request": {
+"url": "{{host}}/api/admin/users/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add User",
+"request": {
+"url": "{{host}}/api/admin/users/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update User",
+"request": {
+"url": "{{host}}/api/admin/users/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+},
+{
+"name": "Role",
+"description": "admin Roles API",
+"item": [
+{
+"name": "Role Details",
+"request": {
+"url": "{{host}}/api/admin/roles/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Role Listing",
+"request": {
+"url": "{{host}}/api/admin/roles",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Add role",
+"request": {
+"url": "{{host}}/api/admin/roles",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"name\": \"Client\",\n  \"guard_name\": \"web\",\n  \"permissions\": [1,2,3]\n }"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Update role",
+"request": {
+"url": "{{host}}/api/admin/roles/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Delete role",
+"request": {
+"url": "{{host}}/api/admin/roles/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Bulk Add role",
+"request": {
+"url": "{{host}}/api/admin/roles/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Bulk Update role",
+"request": {
+"url": "{{host}}/api/admin/roles/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+},
+{
+"name": "Permission",
+"description": "admin Permission API",
+"item": [
+{
+"name": "Permission Details",
+"request": {
+"url": "{{host}}/api/admin/permissions/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Permission Listing",
+"request": {
+"url": "{{host}}/api/admin/permissions",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+},
+{
+"name": "Login",
+"description": "admin Login API",
+"item": [
+{
+"name": "Register",
+"request": {
+"url": "{{host}}/api/admin/register",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n \"username\": \"Tony\",\n  \"password\": \"Tony123\",\n  \"email\": \"tony123@gamil.com\",\n  \"name\": \"Tony\",\n  \"is_active\": \"true\",\n  \"role\": \"1\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Login",
+"request": {
+"url": "{{host}}/api/admin/login",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"username\": \"alba04@yahoo.com\",\n  \"password\": \"84dsujpg\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Forgot Password",
+"request": {
+"url": "{{host}}/api/admin/forgot-password",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Validate OTP",
+"request": {
+"url": "{{host}}/api/admin/validate-otp",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"otp\": \"icR86F\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Reset Password",
+"request": {
+"url": "{{host}}/api/admin/reset-password",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"code\": \"icR86F\"\n, \"new_password\": \"Your Password\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Change Password",
+"request": {
+"url": "{{host}}/api/admin/change-password",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"old_password\": \"Your Old Password\"\n, \"new_password\": \"Your New Password\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Logout",
+"request": {
+"url": "{{host}}/api/admin/logout",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": ""
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+}
+]
+}
+,
+{
+"name": "Device",
+"description": "device APIs",
+"item": [
+{
+"name": "Service",
+"description": "Service Model APIs",
+"item": [
+{
+"name": "Add Service",
+"request": {
+"url": "{{host}}/api/device/services",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"service_id\": \"occaecati\", \n  \"service_name\": \"nesciunt\", \n  \"service_desc\": \"in\", \n  \"is_active\": true  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Service Details",
+"request": {
+"url": "{{host}}/api/device/services/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Service Listing",
+"request": {
+"url": "{{host}}/api/device/services",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Update Service",
+"request": {
+"url": "{{host}}/api/device/services/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"service_id\": \"occaecati\", \n  \"service_name\": \"nesciunt\", \n  \"service_desc\": \"in\", \n  \"is_active\": true  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete Service",
+"request": {
+"url": "{{host}}/api/device/services/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add Service",
+"request": {
+"url": "{{host}}/api/device/services/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}, \n\t{\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update Service",
+"request": {
+"url": "{{host}}/api/device/services/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+},
+{
+"name": "User",
+"description": "User Model APIs",
+"item": [
+{
+"name": "Add User",
+"request": {
+"url": "{{host}}/api/device/users",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"username\": \"vel\", \n  \"password\": \"dolorem\", \n  \"email\": \"explicabo\", \n  \"name\": \"quia\", \n  \"email_verified_at\": \"2021-11-12 10:28:26\", \n  \"is_active\": true, \n  \"user_type\": 1  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "User Details",
+"request": {
+"url": "{{host}}/api/device/users/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "User Listing",
+"request": {
+"url": "{{host}}/api/device/users",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Update User",
+"request": {
+"url": "{{host}}/api/device/users/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"username\": \"vel\", \n  \"password\": \"dolorem\", \n  \"email\": \"explicabo\", \n  \"name\": \"quia\", \n  \"email_verified_at\": \"2021-11-12 10:28:26\", \n  \"is_active\": true, \n  \"user_type\": 1  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete User",
+"request": {
+"url": "{{host}}/api/device/users/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add User",
+"request": {
+"url": "{{host}}/api/device/users/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update User",
+"request": {
+"url": "{{host}}/api/device/users/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+},
+{
+"name": "Login",
+"description": "device Login API",
+"item": [
+{
+"name": "Register",
+"request": {
+"url": "{{host}}/api/device/register",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n \"username\": \"Tony\",\n  \"password\": \"Tony123\",\n  \"email\": \"tony123@gamil.com\",\n  \"name\": \"Tony\",\n  \"is_active\": \"true\",\n  \"role\": \"1\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Login",
+"request": {
+"url": "{{host}}/api/device/login",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"username\": \"xrath@yahoo.com\",\n  \"password\": \"tgczchuz\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Forgot Password",
+"request": {
+"url": "{{host}}/api/device/forgot-password",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Validate OTP",
+"request": {
+"url": "{{host}}/api/device/validate-otp",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"otp\": \"icR86F\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Reset Password",
+"request": {
+"url": "{{host}}/api/device/reset-password",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"code\": \"icR86F\"\n, \"new_password\": \"Your Password\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Change Password",
+"request": {
+"url": "{{host}}/api/device/change-password",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"old_password\": \"Your Old Password\"\n, \"new_password\": \"Your New Password\"\n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Logout",
+"request": {
+"url": "{{host}}/api/device/logout",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}",
+"type": "text"
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": ""
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+}
+]
+}
+],
+"variable": [
+{
+"key": "host",
+"value": "http://127.0.0.1:8000"
+},
+{
+"key": "token",
+"value": "token here"
+}
+]
+}
