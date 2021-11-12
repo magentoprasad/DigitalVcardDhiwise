@@ -15,6 +15,10 @@ class PermissionSeeder extends Seeder
     public function run()
     {
         $permissions = [
+            'create_service',
+            'read_service',
+            'update_service',
+            'delete_service',
             'create_user',
             'read_user',
             'update_user',

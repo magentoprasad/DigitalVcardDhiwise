@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\API\Device;
 
 use App\Http\Controllers\AppBaseController;
+use App\Http\Requests\Device\BulkCreateUserAPIRequest;
+use App\Http\Requests\Device\BulkUpdateUserAPIRequest;
 use App\Http\Requests\Device\CreateUserAPIRequest;
 use App\Http\Requests\Device\UpdateUserAPIRequest;
 use App\Http\Resources\Device\UserCollection;
 use App\Http\Resources\Device\UserResource;
 use App\Repositories\UserRepository;
+use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -95,5 +99,75 @@ class UserController extends AppBaseController
         $user = $this->userRepository->update($input, $id);
 
         return new UserResource($user);
+    }
+
+    /**
+     * Delete given User.
+     *
+     * @param int $id
+     *
+     * @throws Exception
+     *
+     * @return JsonResponse
+     */
+    public function delete(int $id): JsonResponse
+    {
+        $this->userRepository->delete($id);
+
+        return $this->successResponse('User deleted successfully.');
+    }
+
+    /**
+     * Force Delete given User.
+     *
+     * @param int $id
+     *
+     * @throws Exception
+     *
+     * @return JsonResponse
+     */
+    public function forceDelete(int $id): JsonResponse
+    {
+        $this->userRepository->forceDelete($id);
+
+        return $this->successResponse('User deleted successfully.');
+    }
+
+    /**
+     * Bulk create User's.
+     *
+     * @param BulkCreateUserAPIRequest $request
+     *
+     * @return UserCollection
+     */
+    public function bulkStore(BulkCreateUserAPIRequest $request): UserCollection
+    {
+        $users = collect();
+
+        $input = $request->get('data');
+        foreach ($input as $key => $userInput) {
+            $users[$key] = $this->userRepository->create($userInput);
+        }
+
+        return new UserCollection($users);
+    }
+
+    /**
+     * Bulk update User's data.
+     *
+     * @param BulkUpdateUserAPIRequest $request
+     *
+     * @return UserCollection
+     */
+    public function bulkUpdate(BulkUpdateUserAPIRequest $request): UserCollection
+    {
+        $users = collect();
+
+        $input = $request->get('data');
+        foreach ($input as $key => $userInput) {
+            $users[$key] = $this->userRepository->update($userInput, $userInput['id']);
+        }
+
+        return new UserCollection($users);
     }
 }

@@ -22,13 +22,13 @@ Import postman collection from `project_root/postman/postman_collection.json`
 
 ### Default User Credentials
 
-- Email : `okerluke@cremin.com`
-- Password : `8kjwquqz`
+- Email : `xrath@yahoo.com`
+- Password : `tgczchuz`
 
 ### Default Admin Credentials
 
-- Email : `brianne06@hotmail.com`
-- Password : `cpmmothq`
+- Email : `alba04@yahoo.com`
+- Password : `84dsujpg`
 
 Note: you can change the admin / user credentials as you want and then again you have to run php artisan migrate:fresh --seed
 

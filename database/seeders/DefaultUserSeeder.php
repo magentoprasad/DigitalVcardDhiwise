@@ -26,8 +26,8 @@ class DefaultUserSeeder extends Seeder
             'is_active' => $faker->boolean(true),
             'created_at' => $faker->dateTime(),
             'updated_at' => $faker->dateTime(),
-            'email' => 'okerluke@cremin.com',
-            'password' => Hash::make('8kjwquqz'),
+            'email' => 'xrath@yahoo.com',
+            'password' => Hash::make('tgczchuz'),
             'email_verified_at' => Carbon::now(),
             'user_type' => User::TYPE_USER
         ];
@@ -42,8 +42,8 @@ class DefaultUserSeeder extends Seeder
             'is_active' => $faker->boolean(true),
             'created_at' => $faker->dateTime(),
             'updated_at' => $faker->dateTime(),
-            'email' => 'brianne06@hotmail.com',
-            'password' => Hash::make('cpmmothq'),
+            'email' => 'alba04@yahoo.com',
+            'password' => Hash::make('84dsujpg'),
             'email_verified_at' => Carbon::now(),
             'user_type' => User::TYPE_ADMIN
         ];
@@ -58,9 +58,9 @@ class DefaultUserSeeder extends Seeder
             'is_active' => $faker->boolean(true),
             'created_at' => $faker->dateTime(),
             'updated_at' => $faker->dateTime(),
-            'username' => 'oskiles',
-            'email' => 'vmcglynn@yost.biz',
-            'password' => Hash::make('We(&quot;zhM'),
+            'username' => 'nolan.casimir',
+            'email' => 'addison07@simonis.net',
+            'password' => Hash::make(';?m!^M9X|'),
             'email_verified_at' => Carbon::now(),
             'user_type' => User::TYPE_ADMIN
         ];

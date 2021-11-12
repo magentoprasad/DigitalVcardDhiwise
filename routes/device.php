@@ -1,12 +1,27 @@
 <?php
 
 use App\Http\Controllers\API\Device\AuthController;
+use App\Http\Controllers\API\Device\ServiceController;
 use App\Http\Controllers\API\Device\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth:sanctum', 'validate.user']], function () {
 });
 
+    Route::get('services', [ServiceController::class, 'index'])
+        ->name('services.index');
+    Route::get('services/{service}', [ServiceController::class, 'show'])
+        ->name('service.show');
+    Route::post('services', [ServiceController::class, 'store'])
+        ->name('service.store');
+    Route::put('services/{service}', [ServiceController::class, 'update'])
+        ->name('service.update');
+    Route::delete('services/{service}', [ServiceController::class, 'delete'])
+        ->name('service.delete');
+    Route::post('services/bulk-create', [ServiceController::class, 'bulkStore'])
+        ->name('service.store.bulk');
+    Route::post('services/bulk-update', [ServiceController::class, 'bulkUpdate'])
+        ->name('service.update.bulk');
     Route::get('users', [UserController::class, 'index'])
         ->name('users.index');
     Route::get('users/{user}', [UserController::class, 'show'])
@@ -15,6 +30,12 @@ Route::group(['middleware' => ['auth:sanctum', 'validate.user']], function () {
         ->name('user.store');
     Route::put('users/{user}', [UserController::class, 'update'])
         ->name('user.update');
+    Route::delete('users/{user}', [UserController::class, 'delete'])
+        ->name('user.delete');
+    Route::post('users/bulk-create', [UserController::class, 'bulkStore'])
+        ->name('user.store.bulk');
+    Route::post('users/bulk-update', [UserController::class, 'bulkUpdate'])
+        ->name('user.update.bulk');
 
 Route::post('register', [AuthController::class, 'register'])
     ->name('register');

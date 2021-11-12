@@ -10,6 +10,190 @@
 "description": "admin APIs",
 "item": [
 {
+"name": "Service",
+"description": "Service Model APIs",
+"item": [
+{
+"name": "Add Service",
+"request": {
+"url": "{{host}}/api/admin/services",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"service_id\": \"occaecati\", \n  \"service_name\": \"nesciunt\", \n  \"service_desc\": \"in\", \n  \"is_active\": true  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Service Details",
+"request": {
+"url": "{{host}}/api/admin/services/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Service Listing",
+"request": {
+"url": "{{host}}/api/admin/services",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Update Service",
+"request": {
+"url": "{{host}}/api/admin/services/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"service_id\": \"occaecati\", \n  \"service_name\": \"nesciunt\", \n  \"service_desc\": \"in\", \n  \"is_active\": true  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete Service",
+"request": {
+"url": "{{host}}/api/admin/services/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add Service",
+"request": {
+"url": "{{host}}/api/admin/services/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}, \n\t{\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update Service",
+"request": {
+"url": "{{host}}/api/admin/services/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+},
+{
 "name": "User",
 "description": "User Model APIs",
 "item": [
@@ -32,7 +216,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"ut\", \n  \"password\": \"rerum\", \n  \"email\": \"in\", \n  \"name\": \"sed\", \n  \"email_verified_at\": \"2021-11-12 10:19:00\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
+"raw": "{\n  \"username\": \"vel\", \n  \"password\": \"dolorem\", \n  \"email\": \"explicabo\", \n  \"name\": \"quia\", \n  \"email_verified_at\": \"2021-11-12 10:28:26\", \n  \"is_active\": true, \n  \"user_type\": 1  \n}"
 },
 "description": ""
 },
@@ -109,7 +293,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"ut\", \n  \"password\": \"rerum\", \n  \"email\": \"in\", \n  \"name\": \"sed\", \n  \"email_verified_at\": \"2021-11-12 10:19:00\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
+"raw": "{\n  \"username\": \"vel\", \n  \"password\": \"dolorem\", \n  \"email\": \"explicabo\", \n  \"name\": \"quia\", \n  \"email_verified_at\": \"2021-11-12 10:28:26\", \n  \"is_active\": true, \n  \"user_type\": 1  \n}"
 },
 "description": ""
 },
@@ -161,7 +345,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"ut\", \n\t\t\"password\": \"rerum\", \n\t\t\"email\": \"in\", \n\t\t\"name\": \"sed\", \n\t\t\"email_verified_at\": \"2021-11-12 10:19:00\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"ut\", \n\t\t\"password\": \"rerum\", \n\t\t\"email\": \"in\", \n\t\t\"name\": \"sed\", \n\t\t\"email_verified_at\": \"2021-11-12 10:19:00\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
 "description": ""
 },
 "_postman_isSubFolder": true
@@ -186,7 +370,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"ut\", \n\t\t\"password\": \"rerum\", \n\t\t\"email\": \"in\", \n\t\t\"name\": \"sed\", \n\t\t\"email_verified_at\": \"2021-11-12 10:19:00\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"ut\", \n\t\t\"password\": \"rerum\", \n\t\t\"email\": \"in\", \n\t\t\"name\": \"sed\", \n\t\t\"email_verified_at\": \"2021-11-12 10:19:00\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
 "description": ""
 },
 "_postman_isSubFolder": true
@@ -523,7 +707,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"brianne06@hotmail.com\",\n  \"password\": \"cpmmothq\"\n}"
+"raw": "{\n  \"username\": \"alba04@yahoo.com\",\n  \"password\": \"84dsujpg\"\n}"
 },
 "description": ""
 },
@@ -674,6 +858,190 @@
 "description": "device APIs",
 "item": [
 {
+"name": "Service",
+"description": "Service Model APIs",
+"item": [
+{
+"name": "Add Service",
+"request": {
+"url": "{{host}}/api/device/services",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"service_id\": \"occaecati\", \n  \"service_name\": \"nesciunt\", \n  \"service_desc\": \"in\", \n  \"is_active\": true  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Service Details",
+"request": {
+"url": "{{host}}/api/device/services/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+},
+{
+"name": "Service Listing",
+"request": {
+"url": "{{host}}/api/device/services",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Update Service",
+"request": {
+"url": "{{host}}/api/device/services/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"service_id\": \"occaecati\", \n  \"service_name\": \"nesciunt\", \n  \"service_desc\": \"in\", \n  \"is_active\": true  \n}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete Service",
+"request": {
+"url": "{{host}}/api/device/services/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add Service",
+"request": {
+"url": "{{host}}/api/device/services/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}, \n\t{\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update Service",
+"request": {
+"url": "{{host}}/api/device/services/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"service_id\": \"occaecati\", \n\t\t\"service_name\": \"nesciunt\", \n\t\t\"service_desc\": \"in\", \n\t\t\"is_active\": true  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+]
+},
+{
 "name": "User",
 "description": "User Model APIs",
 "item": [
@@ -696,7 +1064,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"ut\", \n  \"password\": \"rerum\", \n  \"email\": \"in\", \n  \"name\": \"sed\", \n  \"email_verified_at\": \"2021-11-12 10:19:00\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
+"raw": "{\n  \"username\": \"vel\", \n  \"password\": \"dolorem\", \n  \"email\": \"explicabo\", \n  \"name\": \"quia\", \n  \"email_verified_at\": \"2021-11-12 10:28:26\", \n  \"is_active\": true, \n  \"user_type\": 1  \n}"
 },
 "description": ""
 },
@@ -773,8 +1141,84 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"ut\", \n  \"password\": \"rerum\", \n  \"email\": \"in\", \n  \"name\": \"sed\", \n  \"email_verified_at\": \"2021-11-12 10:19:00\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
+"raw": "{\n  \"username\": \"vel\", \n  \"password\": \"dolorem\", \n  \"email\": \"explicabo\", \n  \"name\": \"quia\", \n  \"email_verified_at\": \"2021-11-12 10:28:26\", \n  \"is_active\": true, \n  \"user_type\": 1  \n}"
 },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete User",
+"request": {
+"url": "{{host}}/api/device/users/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add User",
+"request": {
+"url": "{{host}}/api/device/users/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"description": ""
+},
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update User",
+"request": {
+"url": "{{host}}/api/device/users/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"vel\", \n\t\t\"password\": \"dolorem\", \n\t\t\"email\": \"explicabo\", \n\t\t\"name\": \"quia\", \n\t\t\"email_verified_at\": \"2021-11-12 10:28:26\", \n\t\t\"is_active\": true, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
 "description": ""
 },
 "_postman_isSubFolder": true
@@ -829,7 +1273,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"okerluke@cremin.com\",\n  \"password\": \"8kjwquqz\"\n}"
+"raw": "{\n  \"username\": \"xrath@yahoo.com\",\n  \"password\": \"tgczchuz\"\n}"
 },
 "description": ""
 },

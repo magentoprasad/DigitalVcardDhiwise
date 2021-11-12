@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\Admin\AuthController;
 use App\Http\Controllers\API\Admin\PermissionController;
 use App\Http\Controllers\API\Admin\RoleController;
+use App\Http\Controllers\API\Admin\ServiceController;
 use App\Http\Controllers\API\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,20 @@ Route::group(['middleware' => ['auth:sanctum', 'validate.user']], function () {
         ->middleware(['permission:manage_roles']);
 });
 
+    Route::get('services', [ServiceController::class, 'index'])
+        ->name('services.index');
+    Route::get('services/{service}', [ServiceController::class, 'show'])
+        ->name('service.show');
+    Route::post('services', [ServiceController::class, 'store'])
+        ->name('service.store');
+    Route::put('services/{service}', [ServiceController::class, 'update'])
+        ->name('service.update');
+    Route::delete('services/{service}', [ServiceController::class, 'delete'])
+        ->name('service.delete');
+    Route::post('services/bulk-create', [ServiceController::class, 'bulkStore'])
+        ->name('service.store.bulk');
+    Route::post('services/bulk-update', [ServiceController::class, 'bulkUpdate'])
+        ->name('service.update.bulk');
     Route::get('users', [UserController::class, 'index'])
         ->name('users.index');
     Route::get('users/{user}', [UserController::class, 'show'])
